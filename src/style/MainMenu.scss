@@ -1,0 +1,62 @@
+.carousel-img {
+    width: 100% !important;
+    height: 100% !important;
+    filter: brightness(40%); // Adjust the percentage to control the darkness level
+  }
+  
+  .carousel-capt {
+    text-align: left !important;
+  }
+  
+  h1 {
+    font-size: 50px !important;
+  }
+  
+  .crs-btn {
+    background: #fff;
+    border: none;
+    padding: 10px 20px;
+    display: inline-block;
+    font-size: 15px;
+    font-weight: 600;
+    width: 15%;
+    text-transform: uppercase;
+    cursor: pointer;
+    transform: skew(-21deg);
+    position: relative; // Tambahin ini biar pseudo-element ::before bisa di posisikan relatif ke button
+    color: #000; // Tambahkan warna teks
+  
+    span {
+      display: inline-block;
+      transform: skew(21deg);
+      color: #000 !important; // Tambahkan warna teks di sini juga
+    }
+  
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 100%;
+      left: 0;
+      background: rgb(20, 20, 20);
+      opacity: 0;
+      z-index: -1;
+      transition: all 0.5s;
+    }
+  
+    &:hover {
+      color: #fff !important;
+  
+      &::before {
+        left: 0;
+        right: 0;
+        opacity: 1;
+      }
+  
+      span {
+        color: #fff !important; // Ubah warna teks saat hover
+      }
+    }
+  }
+  

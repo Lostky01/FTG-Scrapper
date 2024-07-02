@@ -1,0 +1,17 @@
+@import url('https://fonts.cdnfonts.com/css/helvetica-neue-55');
+
+.App {
+    background-color: rgb(27, 27, 27);
+    font-family: 'Helvetica Neue', sans-serif !important;
+                                                
+}
+
+.navbar {
+    background-color: rgba(108, 191, 255, 0.5) !important;
+    color: white;
+    padding: 1rem;
+
+    &.nav-cont {
+        margin: 0 !important;
+    }
+}
